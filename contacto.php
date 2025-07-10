@@ -10,7 +10,7 @@
             exit;
         }
 
-        $destinatario = "teofernandez.work@gmail.com";
+        $destinatario = "teofernandez@teofernandez.com.ar";
         $asunto = "Nuevo mensaje desde tu portafolio web";
 
         $contenido = "Nombre: $nombre\n";
