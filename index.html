@@ -66,7 +66,7 @@
         <div class="proyecto">
             <h3>Gestión de Estacionamiento (PROYECTO ACTUALMENTE EN PROCESO)</h3>
             <p><b>Tecnologías: </b>Java, Spring Boot, HTML5, CSS3, JavaScript, MySQL</p>
-            <p>Sistema web para el control de un estacionamiento de automoviles. Este sistema es capaz de gestionar los espacios disponibles en la playa de estacionamiento, como el flujo de automoviles que adquieron el servicio. También gestiona la cantidad de dinero que se ingresó en caja. Además contiene un login, con diferentes tipos de usuarios.</p>
+            <p>Sistema web para el control de un estacionamiento de automoviles. Este sistema es capaz de gestionar los espacios disponibles en la playa de estacionamiento, como el flujo de automoviles que adquieren el servicio. También gestiona la cantidad de dinero que se ingresó en caja. Además contiene un login, con diferentes tipos de usuarios.</p>
         </div>
     </section>
 
@@ -94,6 +94,8 @@
             <input type="text" name="nombre" placeholder="Tu nombre" required>
             <input type="email" name="email" placeholder="Tu email" required>
             <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
+            <!-- Campo honeypot oculto -->
+            <input type="text" name="honeypot" style="display: none;">
             <button type="submit">Enviar</button>
         </form>
         <div class="redes">
@@ -102,6 +104,20 @@
             <a href="mailto:teofernandez.work@gmail.com"><i class="fas fa-envelope"></i></a>
         </div>
     </section>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const status = urlParams.get('status');
+        if (status === 'success') {
+            alert('¡Mensaje enviado correctamente! Gracias por contactarme.');
+        } else if (status === 'error') {
+            alert('Hubo un problema al enviar el mensaje. Por favor, intenta de nuevo.');
+        } else if (status === 'invalid') {
+            alert('Por favor, completa el formulario correctamente.');
+        } else if (status === 'spam') {
+            alert('Acceso no permitido.');
+        }
+    </script>
 
     <footer>
         <p>© 2025 Teo Melián Fernández. Todos los derechos reservados.</p>
