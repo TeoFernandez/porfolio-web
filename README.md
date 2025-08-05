@@ -2,6 +2,7 @@
 
 Bienvenido a mi portafolio profesional como **Desarrollador Back-End**. Este sitio web fue creado con el objetivo de mostrar mis proyectos, habilidades técnicas y permitir que posibles empleadores o colaboradores puedan conocer más sobre mí y contactarme.
 
+
 ## 🚀 Tecnologías utilizadas
 
 - HTML5
